@@ -2,9 +2,10 @@ import { useState, useRef } from "react";
 import { useClickAway } from "react-use";
 import Hamburger from "hamburger-react";
 import MaiolnirIcon from "../assets/hammerIcon.svg";
-import { IoHomeOutline } from "react-icons/io5";
 import { SiGoogleearthengine } from "react-icons/si";
 import { AnimatePresence, motion } from "framer-motion";
+import { IoIosHome } from "react-icons/io";
+import { FaChevronRight } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function Navbar() {
   const menu = [
     {
       id: "Home",
-      icon: IoHomeOutline,
+      icon: IoIosHome,
       color: "bg-primary",
     },
     {
@@ -38,50 +39,67 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div ref={ref} className="absolute right-4">
-        <Hamburger
-          toggled={isOpen}
-          toggle={setOpen}
-          size={20}
-          color="#F76C00"
-          rounded
-          label="Show menu"
-        />
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 100 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="absolute px-4 -right-4 top-[54px] -z-[50] flex h-[400px] w-[250px] flex-col border border-t-0 border-r-0 bg-white border-primary rounded"
-            >
-              {menu.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <motion.a
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 100 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    onClick={() => setOpen((prev) => !prev)}
-                    className={
-                      "flex w-full items-center justify-start gap-1 border-b border-b-gray-200 p-4 hover:bg-accent hover:bg-opacity-10 active:bg-accent active:text-white rounded"
-                    }
-                    href={`#${item.id.toLowerCase()}`}
-                  >
-                    <Icon
-                      size={23}
-                      color={item.color}
-                      className="text-primary font-black "
-                    />
-                    <span className="text-lg">{item.id}</span>
-                  </motion.a>
-                );
-              })}
-            </motion.div>
-          )}
-        </AnimatePresence>
+      {/* Hamburger Menu and Modal */}
+      <div className="absolute right-4">
+        <div className="relative z-50">
+          <Hamburger
+            toggled={isOpen}
+            toggle={setOpen}
+            size={20}
+            color="#F76C00"
+            rounded
+            label="Show menu"
+          />
+        </div>
+
+        {/* Modal and Menu */}
+        {isOpen && (
+          <div
+            onClick={() => setOpen(false)}
+            className="fixed bottom-0 left-0 right-0 top-0 bg-gray-500 bg-opacity-30"
+          >
+            <AnimatePresence>
+              <div className="relative top-[65px] -z-[50] mx-auto h-[400px] w-[90vw] rounded border bg-white px-1">
+                <motion.ul
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 100 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex flex-col"
+                >
+                  {menu.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <li className="border-b border-b-gray-200">
+                        <motion.a
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 100 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                          onClick={() => setOpen((prev) => !prev)}
+                          className={
+                            "hover:bg-info active:bg-info flex w-full items-center justify-start gap-2 rounded p-2 hover:bg-opacity-10 active:text-white"
+                          }
+                          href={`#${item.id.toLowerCase()}`}
+                        >
+                          <Icon size={23} color={item.color} />
+                          <div className="relative flex w-full items-end justify-between pb-4">
+                            <span className="relative top-3 text-sm font-normal ">
+                              {item.id}
+                            </span>
+                            <div className="relative top-1">
+                              <FaChevronRight size={15} />
+                            </div>
+                          </div>
+                        </motion.a>
+                      </li>
+                    );
+                  })}
+                </motion.ul>
+              </div>
+            </AnimatePresence>
+          </div>
+        )}
       </div>
     </nav>
   );
