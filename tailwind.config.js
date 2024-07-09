@@ -17,7 +17,8 @@ export default {
         secondary: '#171717',
         accent: '#F7A712',
         error: '#A20021',
-        info: '#757780'
+        info: '#757780',
+        text: '#333'
       },
       fontFamily: {
         'sans': [...defaultTheme.fontFamily.sans],
