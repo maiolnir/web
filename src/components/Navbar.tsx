@@ -7,7 +7,7 @@ import { IoIosHome } from "react-icons/io";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDocumentScanner } from "react-icons/md";
 import { GrTools } from "react-icons/gr";
-import { HiArrowSmRight } from "react-icons/hi";
+import { FaArrowRightLong } from "react-icons/fa6";
 import { GrContact } from "react-icons/gr";
 import { SiDocsdotrs } from "react-icons/si";
 
@@ -48,7 +48,7 @@ export default function Navbar() {
           />
           <div>
             <a href="#">
-              <span className="from-accent via-primary bg-gradient-to-r to-[#dd0617] bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+              <span className="from-accent via-primary bg-gradient-to-bl to-[#dd0617] bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
                 MAIOLNIR
               </span>
             </a>
@@ -61,10 +61,10 @@ export default function Navbar() {
               return (
                 <li className="hover:border-accent group flex h-full items-center border-b-4 border-b-transparent">
                   <a
-                    className="text-text group-hover:text-accent flex items-center gap-1 text-lg"
+                    className="text-text group-hover:text-accent flex items-center gap-1"
                     href={`#${item.id.toLowerCase()}`}
                   >
-                    <Icon size={25} className="pt-0" />
+                    <Icon size={20} className="pt-0" />
                     <span className="">{item.id}</span>
                   </a>
                 </li>
@@ -72,9 +72,9 @@ export default function Navbar() {
             })}
           </ul>
         </nav>
-        <button className="bg-accent focus:ring-text hover:bg-primary group relative mr-auto hidden items-center justify-center  gap-1 rounded-lg px-3 py-3  text-lg font-bold text-white transition-all duration-300 focus:outline-none focus:ring-4 lg:flex">
+        <button className="bg-accent focus:ring-text hover:bg-primary group relative mr-auto hidden items-center justify-center  gap-3 rounded-lg px-3 py-3  text-lg font-bold text-white transition-all duration-300 focus:outline-none focus:ring-4 lg:flex">
           <span>Contact</span>
-          <HiArrowSmRight
+          <FaArrowRightLong
             className="transform transition-transform duration-300 group-hover:translate-x-1"
             size={18}
           />
@@ -148,7 +148,7 @@ export default function Navbar() {
                       transition={{ duration: 0.2 }}
                       onClick={() => setOpen((prev) => !prev)}
                       className={
-                        "hover:bg-info active:bg-info flex w-full  justify-start gap-2 rounded  pt-3 hover:bg-opacity-10 active:text-white text-primary"
+                        "hover:bg-info active:bg-info text-primary flex  w-full justify-start gap-2  rounded pt-3 hover:bg-opacity-10 active:text-white"
                       }
                       href={`#contact`}
                     >
