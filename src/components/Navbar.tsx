@@ -41,27 +41,27 @@ export default function Navbar() {
   return (
     <header className="container relative z-50 mx-auto flex h-[72px] w-full items-center bg-white lg:h-[6rem]">
       <div className="flex h-full w-full items-center">
-        <div className="ml-3 flex items-center gap-1 lg:ml-0">
+        <div className="ml-3 flex flex-col items-center gap-1 lg:ml-0">
           <img
             className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
             src={MaiolnirIcon}
           />
           <div>
             <a href="#">
-              <span className="from-accent via-primary bg-gradient-to-bl to-[#dd0617] bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+              <span className="from-accent via-primary bg-gradient-to-bl to-accent bg-clip-text text-xl font-regular text-transparent lg:text-2xl">
                 MAIOLNIR
               </span>
             </a>
           </div>
         </div>
         <nav className="mx-auto h-full">
-          <ul className="text-text ml-6 hidden h-full items-center lg:flex lg:justify-between lg:gap-20">
+          <ul className="text-text ml-6 hidden h-full items-center lg:flex lg:justify-between lg:gap-10">
             {menu.map((item) => {
               const Icon = item.icon;
               return (
                 <li
                   key={item.id}
-                  className="hover:border-accent group flex h-full items-center border-b-4 border-b-transparent"
+                  className="hover:border-accent group flex h-full items-center border-b-4 border-b-transparent pt-3"
                 >
                   <a
                     className="text-text group-hover:text-accent flex items-center gap-1"
@@ -75,8 +75,8 @@ export default function Navbar() {
             })}
           </ul>
         </nav>
-        <button className="bg-accent focus:ring-text hover:bg-primary group relative mr-auto hidden items-center justify-center  gap-3 rounded-lg px-3 py-3  text-lg font-bold text-white transition-all duration-300 focus:outline-none focus:ring-4 lg:flex">
-          <span>Contact</span>
+        <button className="bg-accent focus:ring-text hover:bg-yellow-400 group relative right-14 hidden items-center justify-center  gap-3 rounded-lg px-6 py-4 text-lg font-bold text-white transition-all duration-300 focus:outline-none focus:ring-4 lg:flex">
+          <span>CONTACT</span>
           <FaArrowRightLong
             className="transform transition-transform duration-300 group-hover:translate-x-1"
             size={18}
