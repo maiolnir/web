@@ -39,7 +39,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="container relative z-50 mx-auto flex h-[72px] w-full items-center border-b-[1px] bg-white lg:h-[6rem]">
+    <header className="container relative z-50 mx-auto flex h-[72px] w-full items-center bg-white lg:h-[6rem]">
       <div className="flex h-full w-full items-center">
         <div className="ml-3 flex items-center gap-1 lg:ml-0">
           <img
@@ -59,7 +59,10 @@ export default function Navbar() {
             {menu.map((item) => {
               const Icon = item.icon;
               return (
-                <li className="hover:border-accent group flex h-full items-center border-b-4 border-b-transparent">
+                <li
+                  key={item.id}
+                  className="hover:border-accent group flex h-full items-center border-b-4 border-b-transparent"
+                >
                   <a
                     className="text-text group-hover:text-accent flex items-center gap-1"
                     href={`#${item.id.toLowerCase()}`}
@@ -112,7 +115,10 @@ export default function Navbar() {
                   {menu.map((item) => {
                     const Icon = item.icon;
                     return (
-                      <li className="border-b border-b-gray-200 pb-2">
+                      <li
+                        key={item.id}
+                        className="border-b border-b-gray-200 pb-2"
+                      >
                         <motion.a
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 100 }}
