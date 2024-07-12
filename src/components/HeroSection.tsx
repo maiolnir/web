@@ -1,16 +1,38 @@
+import Hammer from "../assets/manuel-salinas-1pZqh6NVHDc-unsplash.jpg";
+import ContactButton from "./ContactButton";
+
 export default function HeroSection() {
   return (
     <>
       <section>
-        <div className="relative h-[650px] w-full">
-          <div className="z-50 h-full w-full bg-gradient-to-br from-[#000]  to-[#333]">
-            <div className="container mx-auto flex flex-col justify-center h-full">
-              <h1 className="text-7xl font-black text-[#F8F8F8] w-1/2">
-                We Dig Your Data Until It Reveals!
+        <div className="relative h-[415px] w-full bg-gradient-to-br from-[#323232] to-[#313131] px-6 py-10 lg:h-[650px]">
+          <img
+            className="absolute bottom-0 left-1/2 h-[200px] w-[200px] -translate-x-1/2 transform opacity-70 lg:left-auto lg:right-40 lg:h-1/2 lg:translate-x-0 lg:transform"
+            src={Hammer}
+          />
+          <div className="container relative mx-auto  h-full font-serif text-[#F8F8F8]">
+            <div className="flex flex-col justify-start gap-5 lg:w-1/2 lg:gap-10">
+              <h1 className="text-4xl font-black leading-none lg:text-6xl xl:text-[80px]">
+                Customized{" "}
+                <span className="from-accent via-primary bg-gradient-to-r to-red-500 bg-clip-text text-transparent">
+                  Data
+                </span>{" "}
+                Solutions For Your Business
               </h1>
+              <p className="text-[22px] leading-relaxed lg:w-2/3">
+                From data engineering to machine learning, we create bespoke
+                solutions that works for you and only{" "}
+                <span className="border-b-1 border-primary rounded border-b p-1">
+                  you
+                </span>
+                !
+              </p>
+              <ContactButton
+                className="relative mt-4 flex w-2/3 max-w-[150px] px-1 py-2 lg:px-3 lg:py-4"
+                size={18}
+              />
             </div>
           </div>
-          <div className="absolute inset-0 "></div>
         </div>
       </section>
     </>
