@@ -48,7 +48,7 @@ export default function Navbar() {
           />
           <div>
             <a href="#">
-              <span className="from-accent via-primary bg-gradient-to-bl to-accent bg-clip-text text-xl font-regular text-transparent lg:text-2xl">
+              <span className="from-accent via-primary to-accent font-regular bg-gradient-to-bl bg-clip-text text-xl text-transparent lg:text-2xl">
                 MAIOLNIR
               </span>
             </a>
