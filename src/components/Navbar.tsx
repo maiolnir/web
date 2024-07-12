@@ -7,9 +7,9 @@ import { IoIosHome } from "react-icons/io";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDocumentScanner } from "react-icons/md";
 import { GrTools } from "react-icons/gr";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { GrContact } from "react-icons/gr";
 import { SiDocsdotrs } from "react-icons/si";
+import ContactButton from "./ContactButton";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -75,13 +75,9 @@ export default function Navbar() {
             })}
           </ul>
         </nav>
-        <button className="bg-accent focus:ring-text hover:bg-yellow-400 group relative right-14 hidden items-center justify-center  gap-3 rounded-lg px-6 py-4 text-lg font-bold text-white transition-all duration-300 focus:outline-none focus:ring-4 lg:flex">
-          <span>CONTACT</span>
-          <FaArrowRightLong
-            className="transform transition-transform duration-300 group-hover:translate-x-1"
-            size={18}
-          />
-        </button>
+        {/* <div> */}
+        {/*   <ContactButton className="px-6 py-4 lg:flex relative right-14 hidden" size={18} /> */}
+        {/* </div> */}
       </div>
 
       {/* Mobile Hamburger Menu and Modal */}
