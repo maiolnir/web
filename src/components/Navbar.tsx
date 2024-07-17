@@ -9,7 +9,7 @@ import { MdDocumentScanner } from "react-icons/md";
 import { GrTools } from "react-icons/gr";
 import { GrContact } from "react-icons/gr";
 import { SiDocsdotrs } from "react-icons/si";
-import ContactButton from "./ContactButton";
+// import ContactButton from "./ContactButton";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
