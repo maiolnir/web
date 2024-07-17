@@ -10,7 +10,7 @@ export default function HeroSection() {
             className="absolute bottom-0 left-1/2 h-[200px] w-[200px] -translate-x-1/2 transform opacity-20 lg:left-auto lg:right-40 lg:h-1/2 lg:translate-x-0 lg:transform"
             src={Hammer}
           />
-          <div className="container relative mx-auto  h-full font-serif text-[#F8F8F8]">
+          <div className="container relative mx-auto lg:pt-8 h-full font-serif text-[#F8F8F8]">
             <div className="flex flex-col justify-start gap-5 lg:w-1/2 lg:gap-10">
               <h1 className="text-4xl font-black leading-none lg:text-6xl xl:text-[80px]">
                 Customized{" "}
