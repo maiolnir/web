@@ -1,9 +1,18 @@
+import ThorHammer from "../assets/thor-hammer.svg";
+
 export default function SummarySection() {
   return (
     <>
       <section className="bg-[#F1F1F1] px-1.5 py-2.5 lg:py-10">
-        <div className="container mx-auto pt-6 p-1.5 px-4">
-          <p className="text-[#777] text-base leading-7">
+        <div className="container mx-auto p-1.5 px-4 pt-6 flex">
+          <p className=" text-base leading-7 text-info">
+
+          <img
+            src={ThorHammer}
+            className="inline-block mr-1"
+            height="30px"
+            width="30px"
+          />
             Thanks to tools from the open-source community and the power of the
             cloud, small teams can now implement data analytics solutions that
             compete with and even outperform those of larger companies.
