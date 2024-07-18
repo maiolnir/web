@@ -29,7 +29,7 @@ const Card = ({
 
 export default function AboutSection() {
   return (
-    <section className="mt-16 h-[1000px]" id="about">
+    <section className="mt-16" id="about">
       <div className="text-secondary mx-auto flex flex-col gap-4">
         <div className="flex flex-col gap-10">
           <div className="container mx-auto mb-10 px-5">
@@ -44,7 +44,7 @@ export default function AboutSection() {
               follows these steps:
             </p>
           </div>
-          <div className="relative bg-[url('src/assets/pexels-chetanvlad-2409111.jpg')] bg-cover bg-center">
+          <div className="relative bg-gray-50">
             <div className="container mx-auto grid grid-cols-1 gap-14 md:grid-cols-3">
               <Card text="Inquire" icon=<TbAnalyze />>
                 <p>
