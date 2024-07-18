@@ -1,15 +1,11 @@
 import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
-import SummarySection from "../components/SummarySection";
-import AboutSection from "../components/AboutSection";
+import { Outlet } from 'react-router-dom';
 
 export default function MainPage() {
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <SummarySection />
-      <AboutSection />
+      <Outlet />
     </>
   );
 }
