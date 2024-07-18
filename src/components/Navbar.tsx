@@ -9,6 +9,8 @@ import { MdDocumentScanner } from "react-icons/md";
 import { GrTools } from "react-icons/gr";
 import { GrContact } from "react-icons/gr";
 import { SiDocsdotrs } from "react-icons/si";
+import { HashLink } from 'react-router-hash-link';
+
 // import ContactButton from "./ContactButton";
 
 export default function Navbar() {
@@ -63,13 +65,13 @@ export default function Navbar() {
                   key={item.id}
                   className="hover:border-accent group flex h-full items-center border-b-4 border-b-transparent pt-3"
                 >
-                  <a
+                  <HashLink
                     className="text-text group-hover:text-accent flex items-center gap-1"
-                    href={`#${item.id.toLowerCase()}`}
+                    to={`/#${item.id.toLowerCase()}`}
                   >
                     <Icon size={20} className="pt-0" />
                     <span className="">{item.id}</span>
-                  </a>
+                  </HashLink>
                 </li>
               );
             })}
