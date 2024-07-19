@@ -49,11 +49,13 @@ export default function Navbar() {
             src={MaiolnirIcon}
           />
           <div>
-            <a href="#">
+            <HashLink
+              to="/#"
+            >
               <span className="from-accent via-primary to-accent font-regular bg-gradient-to-bl bg-clip-text text-xl text-transparent lg:text-2xl">
                 MAIOLNIR
               </span>
-            </a>
+            </HashLink>
           </div>
         </div>
         <nav className="mx-auto h-full">
