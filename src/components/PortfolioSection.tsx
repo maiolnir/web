@@ -1,29 +1,45 @@
-import * as React from "react";
-import { TbAnalyze } from "react-icons/tb";
-import { FaReadme } from "react-icons/fa6";
-import { GiThorHammer } from "react-icons/gi";
-import { GiCycle } from "react-icons/gi";
-
+import { FaArrowRightLong } from "react-icons/fa6";
 import { MdDocumentScanner } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({
-  text,
-  icon,
-  children,
+  title,
+  src,
+  sector,
+  path
 }: {
-  text: string;
-  icon: React.ReactNode;
-  children: React.ReactNode;
+  title: string;
+  src: string;
+  sector: string;
+  path: string
 }) => {
+  const navigate = useNavigate();
+  const handleClick = (path: string) => {
+    navigate(path);
+  };
+
   return (
-    <div className="border-info relative mx-auto w-[300px] rounded-md  bg-white px-6 py-8 shadow-lg">
-      <div className="border-accent text-accent absolute left-1/2 top-0 flex h-[50px] w-[50px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border bg-white text-3xl font-bold">
-        {icon}
+    <div className="max-w-1/2 group relative col-span-1 mx-10 h-[400px] overflow-hidden rounded bg-black">
+      <div className="bg-accent flex items-center justify-between p-5 text-2xl font-semibold text-white">
+        <p className="mx-auto">{title}</p>
       </div>
-      <p className="text-error mb-4 text-center text-2xl font-semibold">
-        {text}
-      </p>
-      <div className="text-info leading-7">{children}</div>
+      <div className="relative">
+        <img className="h-full w-full object-contain" src={src} />
+        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70"></div>
+      </div>
+      <div className="absolute bottom-4 left-5 right-5 flex flex-col gap-3 rounded bg-white px-4 py-6 opacity-0 group-hover:opacity-100">
+        <p className="text-primary font-semibold">{sector}</p>
+        <button
+          onClick={() => handleClick(path)}
+          className="focus:ring-text bg-info group flex items-center justify-center gap-3 rounded-lg py-2 text-lg font-bold text-white transition-all duration-200 hover:bg-yellow-400 focus:outline-none focus:ring-4"
+        >
+          <span className="text-xl font-semibold">Explore</span>
+          <FaArrowRightLong
+            className="transform transition-transform duration-200 group-hover:translate-x-1"
+            size={20}
+          />
+        </button>
+      </div>
     </div>
   );
 };
@@ -46,16 +62,13 @@ export default function PortfolioSection() {
           </div>
         </div>
         <div className="h-[1000px] bg-gray-700 pt-10">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className="col-span-1 h-[400px] max-w-1/2 overflow-hidden rounded relative bg-black mx-10">
-              <div className="bg-accent flex h-[30px] items-center justify-between p-5 text-xl font-semibold text-white z-50">
-                <p className="mx-auto">Dr.Llama</p>
-              </div>
-              <img 
-                className="object-contain h-full w-full"
-                src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*yrWBYgvTjUlvZFD6xpiRjA.jpeg"
-              />
-            </div>
+          <div className="container mx-auto grid grid-cols-1 gap-5 md:grid-cols-3">
+            <Card
+              title="Dr.Llama"
+              src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*yrWBYgvTjUlvZFD6xpiRjA.jpeg"
+              sector="Healthcare Startup"
+              path="/portfolio/drllama"
+            />
           </div>
         </div>
       </div>
