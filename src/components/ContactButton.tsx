@@ -9,7 +9,7 @@ export default function ContactButton({
 }) {
   return (
     <button
-      className={`${className} focus:ring-text group items-center justify-center gap-3 rounded-lg  bg-accent text-lg font-bold text-white transition-all duration-200 hover:bg-yellow-400 focus:outline-none focus:ring-4`} >
+      className={`${className} focus:ring-text group items-center justify-center gap-3 rounded-lg  bg-primary text-lg font-bold text-white transition-all duration-200 hover:bg-yellow-400 focus:outline-none focus:ring-4`} >
       <span className="text-xl">CONTACT</span>
       <FaArrowRightLong
         className="transform transition-transform duration-200 group-hover:translate-x-1"
