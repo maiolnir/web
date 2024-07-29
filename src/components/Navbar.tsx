@@ -52,7 +52,7 @@ export default function Navbar() {
             <HashLink
               to="/#"
             >
-              <span className="from-accent via-primary to-accent font-regular bg-gradient-to-bl bg-clip-text text-xl text-transparent lg:text-2xl">
+              <span className="font-medieval from-accent via-primary to-accent font-regular bg-gradient-to-bl bg-clip-text text-xl text-transparent lg:text-2xl">
                 MAIOLNIR
               </span>
             </HashLink>

@@ -22,6 +22,7 @@ export default {
       },
       fontFamily: {
         "sans": ["Poppins", ...defaultTheme.fontFamily.sans],
+        "medieval": ["MedievalSharp"]
       },
     },
   },
