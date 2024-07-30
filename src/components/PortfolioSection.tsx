@@ -102,6 +102,13 @@ export default function PortfolioSection() {
               sector="Agriculture and Food"
               path="/portfolio/cetrix"
             />
+            <Card
+              className="bg-white"
+              title="GFG: Search"
+              src="https://mv2-production-hub.s3.amazonaws.com/uploads/company/logo/menu_bbcbff5c1f1ded46c25d28119a85c6c2.jpg"
+              sector="Fashion Retail"
+              path="/portfolio/gfg-search"
+            />
           </div>
         </div>
       </div>
