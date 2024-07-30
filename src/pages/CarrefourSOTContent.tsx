@@ -3,75 +3,55 @@ export default function CarrefourSOTContent() {
     <>
       <div className="h-full">
         <div className="container mx-auto bg-white pt-[50px] md:pt-[80px]">
-          <h1 className="font-medieval text-primary mb-10 text-center text-4xl md:text-6xl">
-            Carrefour: SOT
+          <h1 className="font-medieval text-accent mb-10 text-center text-4xl md:text-6xl">
+            Carrefour: Source Of Truth (SOT)
           </h1>
-          <div className="overflow-auto px-4">
+          <div className="text-text overflow-auto px-4">
             <img
-              className="float-left mr-3 h-[150px] w-[150px] md:ml-0 md:h-[300px] md:w-[300px]"
-              src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*yrWBYgvTjUlvZFD6xpiRjA.jpeg"
+              className="float-left mb-3 mr-3 h-[150px] w-[150px] md:ml-0 md:h-[300px] md:w-[300px]"
+              src="https://seeklogo.com/images/C/Carrefour-logo-DA86663E40-seeklogo.com.png"
             />
-
             <p className="text-xl leading-normal">
-              Dr.Llama is the result of a consulting work rendered for an
-              European-based startup whose goal was to use AI to automatically
-              extract biomarkers from blood reports.
+              We worked together with Carrefour`s data engineering team to
+              install for the company the concept of the "<b>Source Of Truth</b>
+              " of data (SOT).
             </p>
             <p className="mt-5 text-xl leading-normal">
-              Initially the solution was implemented using GPT tools, the main
-              pipeline being:
+              Obtaining it is not trivial, it means that the data that is
+              offered to the business team is guaranteeded to be reliable and
+              correct.
             </p>
-            <div className="mt-5 bg-gray-100 text-xl leading-normal">
-              <ol className="flex list-inside list-decimal flex-col gap-2">
-                <li>Extract text from pdf.</li>
-                <li>
-                  Send text to GPT models. No RAG-tool was necessary, a simple
-                  Python script proved enough.
-                </li>
-                <li>
-                  Map results with internal knowledge-base for final answer.
-                </li>
-              </ol>
-            </div>
             <p className="mt-5 text-xl leading-normal">
-              During development we realized the necessity for having a
-              customized evaluation system, which was implemented using openAI`s{" "}
+              The work lasted for more than a whole year and consisted of
+              integrating with their cloud provider at the source of the data.
+            </p>
+            <p className="mt-5 text-xl leading-normal">
+              The solution relied heavely on dbt, to the point where we
+              implemented a new plugin for the community that helped us
+              implement the concept of "<i>unit tests</i>" for SQL queries. We
+              wrote about it in great detail, you can check it{" "}
               <a
                 className="text-blue-500 hover:underline"
-                href="https://github.com/openai/evals"
+                href="https://willian-fuks.medium.com/dbt-flow-unit-testing-elt-transformations-3c2ac61dcb5c"
               >
-                Evals
+                here
               </a>{" "}
-              framework.
+              for more info.
             </p>
             <p className="mt-5 text-xl leading-normal">
-              This allowed us to precisely optimize the prompting strategy.
-              First results scored a success rate of <b>~70%</b>
+              The final solution made it possible for the business team to find
+              problematic stores, cohorts with lower than expected sales and
+              inefficiencies that right away helped the company on cutting
+              losses and improving revenue.
             </p>
-            <p className="mt-5 text-xl leading-normal">
-              After the job was done we ventured into creating the new tool
-              "Dr.Llama" which this time was based on LLama open models.
+
+            <p className="mb-3 mt-5 text-xl leading-normal">
+              The plugin that was developed will remain open source. You can
+              check it here:
             </p>
-            <p className="mt-5 text-xl leading-normal">
-              Interestingly enough we found that despite Llama not being able to
-              solve this challenge, by combining the GPT models with a custom
-              based one results were more than <b>90%</b> successfull.
-            </p>
-            <p className="mb-5 mt-5 text-xl leading-normal">
-              We did a YT video presenting and discussing in more details
-              results. For those interested, here it follows:
-            </p>
-            <div className="w-full h-[200px] md:h-[315px] relative flex justify-center">
-              <iframe
-                width="516"
-                height="315"
-                src="https://www.youtube.com/embed/3yaJ-7k_Y1o?si=XAUe_R85Dx5Wisj-"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
+            <a href="https://github.com/WillianFuks/dbt-flow/tree/master">
+              <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*JZkjaG0Z5wQca67s5pAFZg.jpeg" />
+            </a>
           </div>
         </div>
       </div>
