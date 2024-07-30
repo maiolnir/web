@@ -109,6 +109,13 @@ export default function PortfolioSection() {
               sector="Fashion Retail"
               path="/portfolio/gfg-search"
             />
+            <Card
+              className="bg-white"
+              title="BlueMetrics"
+              src="https://bluemetrics.com.br/wp-content/themes/bluemetrics/assets/dist/images/logo.svg"
+              sector="Finance Credit"
+              path="/portfolio/bluemetrics"
+            />
           </div>
         </div>
       </div>

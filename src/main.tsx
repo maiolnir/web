@@ -11,6 +11,7 @@ import WintaylorContent from "./pages/WintaylorContent";
 import KarzaContent from "./pages/KarzaContent";
 import CetrixContent from "./pages/CetrixContent";
 import GFGSearchContent from "./pages/GFGSearchContent";
+import BlueMetricsContent from "./pages/BlueMetricsContent";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/portfolio/karza" element={<KarzaContent />} />
           <Route path="/portfolio/cetrix" element={<CetrixContent />} />
           <Route path="/portfolio/gfg-search" element={<GFGSearchContent />} />
+          <Route path="/portfolio/bluemetrics" element={<BlueMetricsContent />} />
         </Route>
       </Routes>
     </Router>
