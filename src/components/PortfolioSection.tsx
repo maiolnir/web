@@ -7,13 +7,13 @@ const Card = ({
   title,
   src,
   sector,
-  path
+  path,
 }: {
-  className: string,
+  className: string;
   title: string;
   src: string;
   sector: string;
-  path: string
+  path: string;
 }) => {
   const navigate = useNavigate();
   const handleClick = (path: string) => {
@@ -21,7 +21,9 @@ const Card = ({
   };
 
   return (
-    <div className={`${className} max-w-1/2 group relative col-span-1 mx-10 h-[400px] overflow-hidden rounded`}>
+    <div
+      className={`${className} max-w-1/2 group relative col-span-1 mx-10 h-[400px] overflow-hidden rounded`}
+    >
       <div className="bg-accent flex items-center justify-between p-3 text-2xl font-semibold text-white">
         <p className="mx-auto">{title}</p>
       </div>
@@ -33,7 +35,7 @@ const Card = ({
         <p className="text-primary font-semibold">{sector}</p>
         <button
           onClick={() => handleClick(path)}
-          className="mx-5 focus:ring-text bg-info group flex items-center justify-center gap-3 rounded-lg py-2 text-lg font-bold text-white transition-all duration-200 hover:bg-yellow-400 focus:outline-none focus:ring-4"
+          className="focus:ring-text bg-info group mx-5 flex items-center justify-center gap-3 rounded-lg py-2 text-lg font-bold text-white transition-all duration-200 hover:bg-yellow-400 focus:outline-none focus:ring-4"
         >
           <span className="text-xl font-semibold">Explore</span>
           <FaArrowRightLong
@@ -63,8 +65,8 @@ export default function PortfolioSection() {
             </p>
           </div>
         </div>
-        <div className="h-[1000px] bg-gray-700 pt-10">
-          <div className="container mx-auto grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="bg-gray-700 pb-20 pt-20">
+          <div className="container mx-auto grid grid-cols-1 gap-10 md:grid-cols-3">
             <Card
               className="bg-black"
               title="Dr.Llama"

@@ -3,10 +3,10 @@ export default function DrLlamaContent() {
     <>
       <div className="h-full">
         <div className="container mx-auto bg-white pt-[50px] md:pt-[80px]">
-          <h1 className="font-medieval text-primary mb-10 text-center text-4xl md:text-6xl">
+          <h1 className="font-medieval text-accent mb-10 text-center text-4xl md:text-6xl">
             Dr.Llama
           </h1>
-          <div className="overflow-auto px-4">
+          <div className="overflow-auto px-4 text-text">
             <img
               className="float-left mr-3 h-[150px] w-[150px] md:ml-0 md:h-[300px] md:w-[300px]"
               src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*yrWBYgvTjUlvZFD6xpiRjA.jpeg"
