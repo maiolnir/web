@@ -88,6 +88,13 @@ export default function PortfolioSection() {
               sector="Healthcare, Drugstores."
               path="/portfolio/wintaylor"
             />
+            <Card
+              className="bg-white"
+              title="Karza Technologies"
+              src="https://karza.in/images/karza-logo2.svg"
+              sector="Online Retail"
+              path="/portfolio/karza"
+            />
           </div>
         </div>
       </div>
