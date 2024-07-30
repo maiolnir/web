@@ -81,6 +81,13 @@ export default function PortfolioSection() {
               sector="Retail - online/offline"
               path="/portfolio/carrefour-sot"
             />
+            <Card
+              className="bg-white"
+              title="Wintaylor"
+              src="https://saudedigitalnews.com.br/wp-content/uploads/2018/10/Grupo-DSP.png"
+              sector="Healthcare, Drugstores."
+              path="/portfolio/wintaylor"
+            />
           </div>
         </div>
       </div>

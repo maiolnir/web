@@ -7,6 +7,7 @@ import MainContent from "./pages/MainContent";
 import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 import DrLlamaContent from "./pages/DrLlamaContent";
 import CarrefourSOTContent from "./pages/CarrefourSOTContent";
+import WintaylorContent from "./pages/WintaylorContent";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -16,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<MainContent/>} />
           <Route path="/portfolio/drllama" element={<DrLlamaContent />} />
           <Route path="/portfolio/carrefour-sot" element={<CarrefourSOTContent />} />
-
+          <Route path="/portfolio/wintaylor" element={<WintaylorContent />} />
         </Route>
       </Routes>
     </Router>
