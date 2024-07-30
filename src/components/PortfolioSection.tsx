@@ -95,6 +95,13 @@ export default function PortfolioSection() {
               sector="Online Retail"
               path="/portfolio/karza"
             />
+            <Card
+              className="bg-white"
+              title="Cetrix"
+              src="https://cdn-images-1.medium.com/max/1067/1*9xpfYciBgbZPZwu0fuG-gw.png"
+              sector="Agriculture and Food"
+              path="/portfolio/cetrix"
+            />
           </div>
         </div>
       </div>

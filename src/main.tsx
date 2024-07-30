@@ -9,6 +9,7 @@ import DrLlamaContent from "./pages/DrLlamaContent";
 import CarrefourSOTContent from "./pages/CarrefourSOTContent";
 import WintaylorContent from "./pages/WintaylorContent";
 import KarzaContent from "./pages/KarzaContent";
+import CetrixContent from "./pages/CetrixContent";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/portfolio/carrefour-sot" element={<CarrefourSOTContent />} />
           <Route path="/portfolio/wintaylor" element={<WintaylorContent />} />
           <Route path="/portfolio/karza" element={<KarzaContent />} />
+          <Route path="/portfolio/cetrix" element={<CetrixContent />} />
         </Route>
       </Routes>
     </Router>
