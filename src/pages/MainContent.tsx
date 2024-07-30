@@ -2,6 +2,7 @@ import HeroSection from "../components/HeroSection";
 import SummarySection from "../components/SummarySection";
 import AboutSection from "../components/AboutSection";
 import PortfolioSection from "../components/PortfolioSection";
+import ArtifactsSection from "../components/ArtifactsSection";
 
 export default function MainContent() {
   return (
@@ -10,6 +11,7 @@ export default function MainContent() {
       <SummarySection />
       <AboutSection />
       <PortfolioSection/>
+      <ArtifactsSection/>
     </>
   );
 }
