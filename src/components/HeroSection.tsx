@@ -28,7 +28,7 @@ export default function HeroSection() {
                 !
               </p>
               <ContactButton
-                className=" relative mx-auto mt-2 flex w-2/3 max-w-[150px] px-1 py-2 lg:mx-0 lg:-mt-4 lg:px-3 lg:py-4"
+                className="relative mt-2 flex w-2/3 max-w-[150px] px-1 py-2 lg:mx-0 lg:-mt-4 lg:px-3 lg:py-4"
                 size={18}
               />
             </div>
