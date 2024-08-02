@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useClickAway } from "react-use";
 import Hamburger from "hamburger-react";
 import MaiolnirIcon from "../assets/hammerIcon.svg";
@@ -9,17 +9,41 @@ import { MdDocumentScanner } from "react-icons/md";
 import { GrTools } from "react-icons/gr";
 import { GrContact } from "react-icons/gr";
 import { SiDocsdotrs } from "react-icons/si";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
+import { FaAngleUp } from "react-icons/fa6";
 
 // import ContactButton from "./ContactButton";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const ref = useRef(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
   useClickAway(ref, () => {
     setOpen(false);
   });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navRef.current) {
+        const navHeight = navRef.current.offsetHeight;
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > navHeight) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const menu = [
     {
@@ -42,6 +66,14 @@ export default function Navbar() {
 
   return (
     <header className="container relative z-50 mx-auto flex h-[72px] w-full items-center bg-white lg:h-[6rem]">
+      <div
+        ref={navRef}
+        className={`${isVisible ? "opacity-0 pointer-events-none" : "opacity-100"} transition-opacity duration-300 ease-in-out transform bg-primary hover:bg-accent fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full`}
+      >
+        <a href="#">
+          <FaAngleUp color="white" size={30} />
+        </a>
+      </div>
       <div className="flex h-full w-full items-center">
         <div className="ml-3 flex flex-col items-center gap-1 lg:ml-0">
           <img
@@ -49,9 +81,7 @@ export default function Navbar() {
             src={MaiolnirIcon}
           />
           <div>
-            <HashLink
-              to="/#"
-            >
+            <HashLink to="/#">
               <span className="font-medieval from-accent via-primary to-accent font-regular bg-gradient-to-bl bg-clip-text text-xl text-transparent lg:text-2xl">
                 MAIOLNIR
               </span>
