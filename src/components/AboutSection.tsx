@@ -33,7 +33,7 @@ export default function AboutSection() {
       <div className="text-secondary mx-auto flex flex-col gap-4">
         <div className="flex flex-col gap-10">
           <div className="container mx-auto mb-10 px-5">
-            <h1 className="mx-auto mb-4 flex items-center gap-2 text-4xl font-bold md:mx-0">
+            <h1 className="font-medieval mx-auto mb-4 flex items-center gap-2 text-4xl font-bold md:mx-0">
               <SiDocsdotrs />
               About
             </h1>
