@@ -66,7 +66,7 @@ export default function ArtifactsSection() {
             </p>
           </div>
         </div>
-        <div className="bg-gray-100 pb-20 pt-20">
+        <div className="pb-20 pt-20">
           <div className="container mx-auto grid grid-cols-1 gap-24">
             <Card
               className="bg-white"
