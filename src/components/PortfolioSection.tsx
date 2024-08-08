@@ -27,8 +27,15 @@ const Card = ({
       <div className="bg-accent flex items-center justify-between p-3 text-2xl font-semibold text-white">
         <p className="mx-auto">{title}</p>
       </div>
-      <div className="relative h-full">
-        <img className="h-full w-full object-contain" src={src} />
+      <div
+        style={{
+          backgroundImage: `url('${src}')`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+        className="relative h-full"
+      >
         <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70"></div>
       </div>
       <div className="absolute bottom-4 left-5 right-5 flex flex-col gap-3 rounded bg-white px-4 py-6 opacity-0 group-hover:opacity-100">
@@ -65,7 +72,7 @@ export default function PortfolioSection() {
             </p>
           </div>
         </div>
-        <div className="bg-gray-700 pb-20 pt-20">
+        <div className="bg-gray-800 pb-20 pt-20">
           <div className="container mx-auto grid grid-cols-1 gap-10 md:grid-cols-3">
             <Card
               className="bg-black"
