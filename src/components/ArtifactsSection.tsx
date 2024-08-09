@@ -15,7 +15,7 @@ const Card = ({
   description: string;
 }) => {
   return (
-    <div className="border-error group relative mx-10 overflow-hidden rounded shadow">
+    <div className="border-error group relative mx-10 lg:mx-[150px] overflow-hidden rounded-lg shadow-lg">
       <div className="relative flex h-full flex-col md:flex-row">
         <div
           style={{
@@ -25,7 +25,7 @@ const Card = ({
           className={`${className} h-[250px] w-[300px] flex-shrink-0 flex-grow-0 overflow-hidden`}
         ></div>
         <div className="flex flex-col justify-between">
-          <p className="text-info inline-block px-4 pb-4 pt-4 font-semibold leading-relaxed">
+          <p className="text-info inline-block px-8 pb-4 pt-4 font-semibold leading-relaxed">
             <span className="text-text font-semibold">{title}: </span>
             {description}
           </p>
@@ -62,11 +62,11 @@ export default function ArtifactsSection() {
               On each interaction with companies we may create new tools such as
               open source repositories that helped us solve a given problem. We
               call those as <i>artifacts</i> and this section is dedicated to
-              listing all we have produced so far.
+              listing all we have produced so far:
             </p>
           </div>
         </div>
-        <div className="pb-20 pt-20">
+        <div className="pb-20 pt-0">
           <div className="container mx-auto grid grid-cols-1 gap-24">
             <Card
               className="bg-white"
