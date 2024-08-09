@@ -23,7 +23,7 @@ const SlidingDiv = ({
       controls.start({
         x: 0,
         opacity: 1,
-        transition: { duration: 2 },
+        transition: { duration: 1 },
       });
     }
   }, [controls, inView]);
