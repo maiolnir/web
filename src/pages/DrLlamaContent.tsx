@@ -55,7 +55,7 @@ export default function DrLlamaContent() {
             <p className="mt-5 text-xl leading-normal">
               Interestingly enough we found that despite Llama not being able to
               solve this challenge, by combining the GPT models with a custom
-              based one results were more than <b>90%</b> successfull.
+              based one results were more than <b>99%</b> successfull.
             </p>
             <p className="mb-5 mt-5 text-xl leading-normal">
               We did a YT video presenting and discussing in more details

@@ -29,7 +29,7 @@ export default function GFGSearchContent() {
             </p>
             <p className="mt-5 text-xl leading-normal">
               By adding a machine-learning based layer on top of search results
-              it's expected that performance will increase by around <b>5~6%</b>
+              it's expected that performance will increase by around <b>4~5%</b>{" "}
               on Revenue Per Session with Search.
             </p>
             <p className="mt-5 text-xl leading-normal">
