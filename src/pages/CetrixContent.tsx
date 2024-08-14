@@ -31,14 +31,26 @@ export default function CetrixContent() {
               >
                 cvxpy{" "}
               </a>
-              a powerful open source tool that allowed us to fully optimize the containers distribution. Final results were roughly <b>1400x</b> faster than before
-              and expenses cuts were in the range of <b>50%</b>.
+              a powerful open source tool that allowed us to fully optimize the
+              containers distribution. Final results were roughly <b>1400x</b>{" "}
+              faster than before and expenses cuts were in the range of{" "}
+              <b>50%</b>.
             </p>
             <p className="mt-5 text-xl leading-normal">
-              This taught us the lesson that despite the usefullness of Excel, for better results there are better tools, even in the OS community.
+              This taught us the lesson that despite the usefullness of Excel,
+              for better results there are better tools, even in the OS
+              community.
             </p>
             <p className="mt-5 text-xl leading-normal">
-              We wrote a detailed post explaining all that was implemented, you can check it here.
+              We wrote a detailed post explaining all that was implemented, you
+              can check it{" "}
+              <a
+                className="text-blue-500 hover:underline"
+                href="https://towardsdatascience.com/how-we-optimized-the-problem-of-global-containers-distribution-ea6201d4513e"
+              >
+                here
+              </a>
+              .
             </p>
           </div>
         </div>
