@@ -68,7 +68,7 @@ export default function Navbar() {
     <header className="container relative z-50 mx-auto flex h-[72px] w-full items-center bg-white lg:h-[6rem]">
       <div
         ref={navRef}
-        className={`${isVisible ? "opacity-0 pointer-events-none" : "opacity-100"} transition-opacity duration-300 ease-in-out transform bg-primary hover:bg-accent fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full`}
+        className={`${isVisible ? "pointer-events-none opacity-0" : "opacity-100"} bg-primary hover:bg-accent fixed bottom-5 right-5 z-50 flex h-12 w-12 transform items-center justify-center rounded-full transition-opacity duration-300 ease-in-out md:h-16 md:w-16`}
       >
         <a href="#">
           <FaAngleUp color="white" size={30} />
