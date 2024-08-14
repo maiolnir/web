@@ -15,7 +15,7 @@ import BlueMetricsContent from "./pages/BlueMetricsContent";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<MainPage />}>
           <Route path="/" element={<MainContent />} />
