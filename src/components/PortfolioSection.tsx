@@ -42,7 +42,7 @@ const Card = ({
         <p className="text-primary font-semibold">{sector}</p>
         <button
           onClick={() => handleClick(path)}
-          className="focus:ring-text bg-info group mx-5 flex items-center justify-center gap-3 rounded-lg py-2 text-lg font-bold text-white transition-all duration-200 hover:bg-yellow-400 focus:outline-none focus:ring-4"
+          className="focus:ring-text bg-primary group mx-5 flex items-center justify-center gap-3 rounded-lg py-2 text-lg font-bold text-white transition-all duration-200 hover:bg-yellow-400 focus:outline-none focus:ring-4"
         >
           <span className="text-xl font-semibold">Explore</span>
           <FaArrowRightLong
@@ -72,7 +72,7 @@ export default function PortfolioSection() {
             </p>
           </div>
         </div>
-        <div className="bg-gray-800 pb-20 pt-20">
+        <div className="bg-gradient-to-br from-[#222] to-[#444] pb-20 pt-20">
           <div className="container mx-auto grid grid-cols-1 gap-10 md:grid-cols-3">
             <Card
               className="bg-black"
