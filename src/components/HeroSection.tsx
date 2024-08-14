@@ -59,15 +59,17 @@ export default function HeroSection() {
                   solutions that works for you and only{" "}
                   <span className="text-accent">you</span>!
                 </p>
-                <ContactButton
-                  className="relative mt-2 flex w-2/3 max-w-[150px] px-1 py-2 lg:mx-0 lg:-mt-3 lg:px-3 lg:py-4"
-                  size={18}
-                />
+                <a href="https://www.linkedin.com/in/willian-fuks-62622217">
+                  <ContactButton
+                    className="relative mt-2 flex w-2/3 max-w-[150px] px-1 py-2 lg:mx-0 lg:-mt-3 lg:px-3 lg:py-4"
+                    size={18}
+                  />
+                </a>
               </div>
             </SlidingDiv>
 
             <img
-              className="opacity-20 absolute z-1 bottom-0 left-1/2 h-[200px] w-[200px] -translate-x-1/2 transform rounded lg:opacity-100 lg:left-auto lg:right-10 lg:h-[500px] lg:w-[500px] lg:translate-x-0 lg:transform"
+              className="z-1 absolute bottom-0 left-1/2 h-[200px] w-[200px] -translate-x-1/2 transform rounded opacity-20 lg:left-auto lg:right-10 lg:h-[500px] lg:w-[500px] lg:translate-x-0 lg:transform lg:opacity-100"
               src={Hammer}
             />
           </div>
