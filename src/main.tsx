@@ -14,11 +14,9 @@ import GFGSearchContent from "./pages/GFGSearchContent";
 import BlueMetricsContent from "./pages/BlueMetricsContent";
 
 const basename = import.meta.env.VITE_BASENAME || "/";
-console.log("basename", basename);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <div>test2</div>
     <Router basename={basename}>
       <Routes>
         <Route path="/" element={<MainPage />}>
