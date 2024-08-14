@@ -15,7 +15,7 @@ const Card = ({
   description: string;
 }) => {
   return (
-    <div className="border-error group relative mx-10 lg:mx-[150px] overflow-hidden rounded-lg shadow-lg">
+    <div className="border-error group relative mx-10 overflow-hidden rounded-lg shadow-lg lg:mx-[150px]">
       <div className="relative flex h-full flex-col md:flex-row">
         <div
           style={{
