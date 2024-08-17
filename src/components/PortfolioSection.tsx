@@ -22,7 +22,7 @@ const Card = ({
 
   return (
     <div
-      className={`${className} max-w-1/2 group relative col-span-1 mx-10 h-[400px] overflow-hidden rounded`}
+      className={`${className} max-w-1/2 group relative col-span-1 mx-10 h-[400px] overflow-hidden rounded-xl`}
     >
       <div className="bg-accent flex items-center justify-between p-3 text-2xl font-semibold text-white">
         <p className="mx-auto">{title}</p>
