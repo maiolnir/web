@@ -28,6 +28,7 @@ jobs:
       - name: Build the project
         run: |
           npm run build
+          echo "maiolnir.com" > ./dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
