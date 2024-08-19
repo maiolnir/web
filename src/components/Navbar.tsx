@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useClickAway } from "react-use";
 import Hamburger from "hamburger-react";
-import MaiolnirIcon from "../assets/hammerIcon.svg";
+import MaiolnirIcon from "../assets/logo_maiolnir2.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoIosHome } from "react-icons/io";
 import { FaChevronRight } from "react-icons/fa";
@@ -78,7 +78,7 @@ export default function Navbar() {
         <div className="flex h-full w-full items-center">
           <div className="ml-3 flex flex-col items-center gap-1 lg:ml-0">
             <img
-              className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
+              className="h-[30px] w-[30px] lg:h-[40px] lg:w-[40px]"
               src={MaiolnirIcon}
             />
             <div>
